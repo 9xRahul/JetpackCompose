@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.jetpackcompose.jetpackcomposeexamples.OutlineTextFieldExample
+import com.example.jetpackcompose.jetpackcomposeexamples.RowExample
+
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeTheme {
-                OutlineTextFieldExample()
+                RowExample()
             }
         }
     }
