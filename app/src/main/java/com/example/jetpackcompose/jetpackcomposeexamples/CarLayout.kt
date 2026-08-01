@@ -94,7 +94,8 @@ fun CardLayoutDesign() {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(all = 16.dp)
+                    .padding(all = 16.dp),
+                verticalAlignment = Alignment.CenterVertically,
             ) {
 
                 Box(
