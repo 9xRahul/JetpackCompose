@@ -21,6 +21,8 @@ import com.example.jetpackcompose.jetpackcomposeexamples.OutlineTextFieldExample
 import com.example.jetpackcompose.jetpackcomposeexamples.RememberSavableExample
 import com.example.jetpackcompose.jetpackcomposeexamples.RowExample
 import com.example.jetpackcompose.jetpackcomposeexamples.StateManagementExample
+import com.example.jetpackcompose.jetpackcomposeexamples.navigation.LoginScreenNavigation
+import com.example.jetpackcompose.jetpackcomposeexamples.navigation.NavGraph
 
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
@@ -30,7 +32,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JetpackComposeTheme {
-                AlertDialougeExample()
+                NavGraph()
             }
         }
     }
