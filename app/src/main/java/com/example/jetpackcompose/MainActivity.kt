@@ -4,38 +4,32 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcompose.jetpackcomposeexamples.AlertDialougeExample
-import com.example.jetpackcompose.jetpackcomposeexamples.CounterChild
-import com.example.jetpackcompose.jetpackcomposeexamples.CounterParent
-import com.example.jetpackcompose.jetpackcomposeexamples.DefaultButtonExplore
-import com.example.jetpackcompose.jetpackcomposeexamples.LoginScreen
-import com.example.jetpackcompose.jetpackcomposeexamples.ModifiersPreview
-import com.example.jetpackcompose.jetpackcomposeexamples.OutlineTextFieldExample
-import com.example.jetpackcompose.jetpackcomposeexamples.RememberSavableExample
-import com.example.jetpackcompose.jetpackcomposeexamples.RowExample
-import com.example.jetpackcompose.jetpackcomposeexamples.StateManagementExample
-import com.example.jetpackcompose.jetpackcomposeexamples.navigation.LoginScreenNavigation
-import com.example.jetpackcompose.jetpackcomposeexamples.navigation.NavGraph
-
+import androidx.activity.viewModels
+import com.example.jetpackcompose.jetpackcomposeexamples.SnackBarExample
+import com.example.jetpackcompose.jetpackcomposeexamples.ToastAndSnackBar
+import com.example.jetpackcompose.jetpackcomposeexamples.viewmodel.CounterApp
+import com.example.jetpackcompose.jetpackcomposeexamples.viewmodel.ScoreViewModel
+import com.example.jetpackcompose.navigationbar.NavbarHomeScreen
+import com.example.jetpackcompose.navigationbar.NavbarNavigation
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
+
+    //view model instance
+
+    private val viewModel:ScoreViewModel by viewModels ()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             JetpackComposeTheme {
-                NavGraph()
+                CounterApp(viewModel)
             }
         }
     }
+
+
 }
 
 
