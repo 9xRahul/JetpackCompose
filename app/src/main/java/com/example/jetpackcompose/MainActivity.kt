@@ -4,26 +4,32 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.jetpackcompose.jetpackcomposeexamples.OutlineTextFieldExample
+import androidx.activity.viewModels
+import com.example.jetpackcompose.jetpackcomposeexamples.SnackBarExample
+import com.example.jetpackcompose.jetpackcomposeexamples.ToastAndSnackBar
+import com.example.jetpackcompose.jetpackcomposeexamples.viewmodel.CounterApp
+import com.example.jetpackcompose.jetpackcomposeexamples.viewmodel.ScoreViewModel
+import com.example.jetpackcompose.navigationbar.NavbarHomeScreen
+import com.example.jetpackcompose.navigationbar.NavbarNavigation
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 
 class MainActivity : ComponentActivity() {
+
+    //view model instance
+
+    private val viewModel:ScoreViewModel by viewModels ()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             JetpackComposeTheme {
-                OutlineTextFieldExample()
+                CounterApp(viewModel)
             }
         }
     }
+
+
 }
 
 
