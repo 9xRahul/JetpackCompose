@@ -8,21 +8,44 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:launchMode="singleTop"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JetpackCompose">
+        android:theme="@style/Theme.MySPlashScreen">
+
+        <activity
+            android:name=".jetpackcomposeexamples.splashscreen.SpalshScreen"
+            android:exported="true"
+            android:label="@string/title_activity_spalsh_screen"
+            android:theme="@style/Theme.transparent"
+            android:windowSoftInputMode="adjustResize" >
+
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.JetpackCompose"
+            android:theme="@style/Theme.MySPlashScreen"
             android:windowSoftInputMode="adjustResize">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
         </activity>
+        <activity android:name=".jetpackcomposeexamples.intents.SecondActivity" />
+
+
     </application>
 
 </manifest>
