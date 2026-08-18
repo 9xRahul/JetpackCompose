@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JetpackCompose</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="title_activity_spalsh_screen">SpalshScreen</string>
 </resources>
