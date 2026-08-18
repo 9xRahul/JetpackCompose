@@ -30,6 +30,7 @@ import com.example.jetpackcompose.navigationbar.NavbarHomeScreen
 import com.example.jetpackcompose.navigationbar.NavbarNavigation
 import com.example.jetpackcompose.ui.theme.JetpackComposeTheme
 import coil3.compose.AsyncImage
+import com.example.jetpackcompose.jetpackcomposeexamples.sharedpreferences.SharedPref
 
 class MainActivity : ComponentActivity() {
 
@@ -59,12 +60,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             JetpackComposeTheme {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center,
-                ){
-                    Text(text = "Main Activity", fontSize = 18.sp)
-                }
+                SharedPref(this)
 
             }
         }
